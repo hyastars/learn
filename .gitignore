@@ -1,1 +1,32 @@
 cpptools-linux-x64.vsix
+
+# C/C++ specific ignores
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+
+# CMake build directory
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore compiled binaries (without extension)
+# To ignore binaries without extension, use:
+*
+!*.*
+!*/
+# Note: This might affect other non-binary files without extension. Use cautiously.
+
+# Ensure Makefile is not ignored
+!Makefile
