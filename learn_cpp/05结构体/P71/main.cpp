@@ -20,6 +20,12 @@ void bubbleSort(struct Hero heroArray[] , int len) {
     }
 }
 
+void printHero(struct Hero heroArray[] , int len) {
+    for(int i = 0;i < len ; i++){
+     cout << "\tname:" << heroArray[i].name << " age:" <<heroArray[i].age << " gender:" << heroArray[i].gender << endl;
+    }
+}
+
 int main() {
     struct Hero heroArray[5] = {
         {"刘备",23,"男"},
@@ -30,10 +36,15 @@ int main() {
     };
 
     int len = sizeof(heroArray)/sizeof(heroArray[0]);
-    bubbleSort(heroArray , len);
 
+    cout << "before: " << endl;
     for(int i = 0;i < len; i++) {
-        cout << "name:" << heroArray[i].name << " age:" <<heroArray[i].age << " gender:" << heroArray[i].gender << endl;
+        cout << "\tname:" << heroArray[i].name << " age:" <<heroArray[i].age << " gender:" << heroArray[i].gender << endl;
     }
+    cout << "after: " << endl;
+
+    bubbleSort(heroArray , len);
+    printHero(heroArray , len);
+
 }
 
