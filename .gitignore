@@ -1,32 +1,41 @@
-cpptools-linux-x64.vsix
+# 忽略所有文件
+*
 
-# C/C++ specific ignores
+# 保留源代码文件
+!*.c
+!*.cpp
+!*.h
+!*.hpp
+!*.java
+
+# 保留目录结构
+!*/
+
+# 忽略编译输出和中间文件
 *.o
 *.out
 *.exe
 *.dll
 *.so
 *.dylib
+*.class
+*.jar
+*.pyc
 
-# CMake build directory
+# 忽略由 CMake 和构建系统生成的文件
 build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
 
-# IDE and editor files
+# 忽略 IDE 和编辑器生成的配置文件
 .vscode/
 .idea/
 *.swp
 *~
 
-# OS generated files
+# 忽略操作系统生成的文件
 .DS_Store
 Thumbs.db
 
-# Ignore compiled binaries (without extension)
-# To ignore binaries without extension, use:
-*
-!*.*
-!*/
-# Note: This might affect other non-binary files without extension. Use cautiously.
-
-# Ensure Makefile is not ignored
-!Makefile
