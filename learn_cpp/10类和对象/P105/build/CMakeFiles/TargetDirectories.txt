@@ -1,3 +1,0 @@
-/home/hyastar/learn-C/learn_cpp/10类和对象/P105/build/CMakeFiles/main_cmake.dir
-/home/hyastar/learn-C/learn_cpp/10类和对象/P105/build/CMakeFiles/edit_cache.dir
-/home/hyastar/learn-C/learn_cpp/10类和对象/P105/build/CMakeFiles/rebuild_cache.dir
