@@ -51,7 +51,20 @@ void *accept_request(void* from_client){
         i++;j++;
     }
     url[i] = '\0';
+    
+    if(strcasecmp(method, "GET") == 0){
+        query_string = url;
+        while((*query_string != '?') && (*query_string != '\0'))
+            query_string++;
+        if(*query_string == '?'){
+            cgi = 1;
+            *query_string = '\0';
+            query_string++;
+        }
 
+    }
+
+    sprintf(path, "httpdoc%s", url);
 
 }
 
