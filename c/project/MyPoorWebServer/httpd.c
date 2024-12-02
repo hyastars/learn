@@ -66,5 +66,8 @@ void *accept_request(void* from_client){
 
     sprintf(path, "httpdoc%s", url);
 
+    if(stat(path, &st) == -1){
+        strcat(path, "test.html");
+    }
 }
 
