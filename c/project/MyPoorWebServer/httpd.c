@@ -65,9 +65,17 @@ void *accept_request(void* from_client){
     }
 
     sprintf(path, "httpdoc%s", url);
+    
+    if(path[strlen(path) - 1] == '/'){
+        strcat(path, "test.html")
+    }
 
     if(stat(path, &st) == -1){
-        strcat(path, "test.html");
+        while((number > 0) && strcmp("\n", buf))
+            numbers = get_line(client, buf, sizeof(buf));
+
+        notfound(client);
     }
+    else
 }
 
