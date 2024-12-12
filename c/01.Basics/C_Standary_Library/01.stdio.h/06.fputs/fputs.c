@@ -1,14 +1,12 @@
 #include <stdio.h>
 
 int main(){
-    FILE *file = fopen("input.txt", "r");
-    char s[100];
+    FILE *file = fopen("output.txt", "w");
     if(file == NULL){
         printf("Error opening file!\n");
         return 1;
     }
-    fscanf(file, "%s\n", &s);
-    printf("Read interget: %s\n", s);
+    fputs("Hello, file!\n", file);
     fclose(file);
     return 0;
 }
