@@ -4,7 +4,7 @@ public:
         ListNode* temp;
         ListNode* cur = head;
         ListNode* pre = NULL;
-        while(curl){
+        while(cur){
             temp = cur->next;
             cur->next = pre;
             pre = cur;
